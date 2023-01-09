@@ -1,0 +1,55 @@
+.footer {
+    background-color: white;
+}
+
+.footer > .container > .row {
+    padding: 40px 0;
+}
+
+.footer > .container:first-child > .row {
+    border-bottom: 1px solid #333;
+}
+
+.footer-label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.footer-list {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-list > li {
+    margin-top: 6px;
+    font-size: 0.9rem;
+}
+
+.footer-list > li > a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-list > li > a:hover {
+    color: #22BA19;
+}
+
+.logo-hcmus {
+    width: 100%;
+    height: auto;
+}
+
+.label-name {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.label-hcmus {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.label-project {
+    font-size: 0.9rem;
+    font-weight: 450;
+}

@@ -32,45 +32,55 @@
             </div>
         </div>
         <div class="row m-auto ticket-list">
-            {{!-- {{#each lich_su_dat_ve}} --}}
-                <div class="row ticket-item">
-                    <div class="col-4 d-flex flex-column justify-content-center">
-                        <span class="ticket-operator">Nhà xe Phương Trang</span>
-                        <div class="ticket-route d-flex align-items">
-                            <span>Sài Gòn</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                            <span>Hà Nội</span>
+            {{#each lich_su_dat_ve}}
+                {{#each CT_Dat_Chos}}
+                    
+                        <div class="row ticket-item">
+                            {{#with Chuyen_Xe}}
+                                <div class="col-4 d-flex flex-column justify-content-center">
+                                    <span class="ticket-operator">Nhà xe {{Nha_Xe.ten_Nha_Xe}}</span>
+                                    <div class="ticket-route d-flex align-items">
+                                        <span>Sài Gòn</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                        <span>Hà Nội</span>
+                                    </div>
+                                    <!-- <span class="ticket-route">Sài Gòn - Hà Nội</span> -->
+                                    <span class="ticket-date">Ngày xuất phát: {{parseToDate Ngay_Di}}</span>
+                                </div>
+                                <div class="col-4 row">
+                                    <div class="col ticket-content">
+                                        <span>{{Gio_Bat_Dau}}</span>
+                                    </div>
+                                    <div class="col ticket-content">
+                                        <span>{{Tong_Thoi_Gian_Hanh_Trinh}}</span>
+                                    </div>
+                                    <div class="col ticket-content">
+                                        <span>{{calculateTimeEnd Gio_Bat_Dau Tong_Thoi_Gian_Hanh_Trinh}}</span>
+                                    </div>
+                                </div>
+                            {{/with}}
+                            <div class="col-2 ticket-content">
+                                <span>{{Gia}}</span>
+                            </div>
+                            <div class="col-1 ticket-content">
+                                <span>{{id}}</span>
+                            </div>
+                            <form class="formSubmit d-flex justify-content-center align-items-center" action="/taikhoan/lichsudatve" method="POST">
+                                <div class="col-1 ticket-content w-100">
+                                    <input type="hidden" name="idGhe" value="{{id}}">
+                                    <button type="submit" class="btn btn-primary ">Hủy vé</button>
+                                </div>
+                            </form>
+                            
                         </div>
-                        <!-- <span class="ticket-route">Sài Gòn - Hà Nội</span> -->
-                        <span class="ticket-date">Ngày xuất phát: 12/10/2022</span>
-                    </div>
-                    <div class="col-4 row">
-                        <div class="col ticket-content">
-                            <span>6:45</span>
-                        </div>
-                        <div class="col ticket-content">
-                            <span>32:00</span>
-                        </div>
-                        <div class="col ticket-content">
-                            <span>14:00</span>
-                        </div>
-                    </div>
-                    <div class="col-2 ticket-content">
-                        <span>400.000đ</span>
-                    </div>
-                    <div class="col-1 ticket-content">
-                        <span>281</span>
-                    </div>
-                    <div class="col-1 ticket-content">
-                        <button class="btn btn-primary">Hủy vé</button>
-                    </div>
-                </div>
-            {{!-- {{/each}} --}}
+                    
+                {{/each}}
+            {{/each}}
         </div>
     </div>
     <!-- Booking history end -->
 
+    <link rel="stylesheet" href="/css/lichsu_datve.css">
     
 </body>
 
-</html>

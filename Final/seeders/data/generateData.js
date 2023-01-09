@@ -158,8 +158,8 @@ function newDate(addDay){
                 let randomGhe = Math.floor(Math.random() * 32) + 32*(randomXeId-1) + 1
                 if(!listGhe.includes(randomGhe)){
                     if(randomGhe - 32*randomXeId <= 16){
-                        Tong = Tong + randomGiaVe1*1.1
-                        items_CT_Dat_Cho.push({Gia:randomGiaVe1*1.1,ChuyenXeId:idChuyenXe-1,VeId:idDatCho-1,GheId:randomGhe})
+                        Tong = Tong + Math.floor(randomGiaVe1*1.1)
+                        items_CT_Dat_Cho.push({Gia:Math.floor(randomGiaVe1*1.1),ChuyenXeId:idChuyenXe-1,VeId:idDatCho-1,GheId:randomGhe})
                     }else{
                         Tong = Tong + randomGiaVe1
                         items_CT_Dat_Cho.push({Gia:randomGiaVe1,ChuyenXeId:idChuyenXe-1,VeId:idDatCho-1,GheId:randomGhe})
@@ -196,8 +196,8 @@ function newDate(addDay){
                 let randomGhe = Math.floor(Math.random() * 32) + 32*(randomXeId-1) + 1
                 if(!listGhe.includes(randomGhe)){
                     if(randomGhe - 32*randomXeId <= 16){
-                        Tong = Tong + randomGiaVe1*1.1
-                        items_CT_Dat_Cho.push({Gia:randomGiaVe1*1.1,ChuyenXeId:idChuyenXe-1,VeId:idDatCho-1,GheId:randomGhe})
+                        Tong = Tong + Math.floor(randomGiaVe1*1.1)
+                        items_CT_Dat_Cho.push({Gia:Math.floor(randomGiaVe1*1.1),ChuyenXeId:idChuyenXe-1,VeId:idDatCho-1,GheId:randomGhe})
                     }else{
                         Tong = Tong + randomGiaVe1
                         items_CT_Dat_Cho.push({Gia:randomGiaVe1,ChuyenXeId:idChuyenXe-1,VeId:idDatCho-1,GheId:randomGhe})
@@ -241,8 +241,8 @@ function newDate(addDay){
                 let randomGhe = Math.floor(Math.random() * 32) + 32*(randomXeId-1) + 1
                 if(!listGhe.includes(randomGhe)){
                     if(randomGhe - 32*randomXeId <= 16){
-                        Tong = Tong + randomGiaVe1*1.1
-                        items_CT_Dat_Cho.push({Gia:randomGiaVe2*1.1,ChuyenXeId:idChuyenXe-1,VeId:idDatCho-1,GheId:randomGhe})
+                        Tong = Tong + Math.floor(randomGiaVe1*1.1)
+                        items_CT_Dat_Cho.push({Gia:Math.floor(randomGiaVe2*1.1),ChuyenXeId:idChuyenXe-1,VeId:idDatCho-1,GheId:randomGhe})
                     }else{
                         Tong = Tong + randomGiaVe1
                         items_CT_Dat_Cho.push({Gia:randomGiaVe2,ChuyenXeId:idChuyenXe-1,VeId:idDatCho-1,GheId:randomGhe})
@@ -278,8 +278,8 @@ function newDate(addDay){
                 let randomGhe = Math.floor(Math.random() * 32) + 32*(randomXeId-1) + 1
                 if(!listGhe.includes(randomGhe)){
                     if(randomGhe - 32*randomXeId <= 16){
-                        Tong = Tong + randomGiaVe1*1.1
-                        items_CT_Dat_Cho.push({Gia:randomGiaVe2*1.1,ChuyenXeId:idChuyenXe-1,VeId:idDatCho-1,GheId:randomGhe})
+                        Tong = Tong + Math.floor(randomGiaVe1*1.1)
+                        items_CT_Dat_Cho.push({Gia:Math.floor(randomGiaVe2*1.1),ChuyenXeId:idChuyenXe-1,VeId:idDatCho-1,GheId:randomGhe})
                     }else{
                         Tong = Tong + randomGiaVe1
                         items_CT_Dat_Cho.push({Gia:randomGiaVe2,ChuyenXeId:idChuyenXe-1,VeId:idDatCho-1,GheId:randomGhe})

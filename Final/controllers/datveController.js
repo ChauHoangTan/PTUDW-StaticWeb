@@ -96,13 +96,13 @@ controller.showDetails = async (req, res) => {
     //console.log(getImage)
     let findDiemDi = await models.Dia_Diem.findOne({
         where:{
-            id: detailsChuyenXe.Diem_Di
+            id: detailsChuyenXe.DiemDiId
         }
     })
     
     let findDiemDen = await models.Dia_Diem.findOne({
         where:{
-            id: detailsChuyenXe.Diem_Den
+            id: detailsChuyenXe.DiemDenId
         }
     })
 

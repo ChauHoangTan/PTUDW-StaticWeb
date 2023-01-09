@@ -39,68 +39,6 @@
 }
 
 /*
-    Footer
-*/
-
-.footer > .container > .row {
-    padding: 40px 0;
-}
-
-.footer > .container:first-child > .row {
-    border-bottom: 1px solid #333;
-}
-
-.footer-list {
-    padding: 0;
-    list-style: none;
-}
-
-.footer-list > li {
-    margin-top: 6px;
-}
-
-.footer-list > li > a {
-    color: #333;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.footer-list > li > a:hover {
-    color: #22BA19;
-}
-
-.social-media-list {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-}
-
-.social-media-list > li {
-    margin: 0px 30px 0 0;
-    text-decoration: none;
-}
-
-.social-media-list > li > a {
-    font-size: 1.2rem;
-}
-
-.social-media-list > li:nth-child(1) > a {
-    color: #3b5998;
-}
-
-.social-media-list > li:nth-child(2) > a {
-    color: #dd4b39;
-}
-
-.social-media-list > li:nth-child(3) > a {
-    color: #0082ca;
-}
-
-.social-media-list > li:nth-child(4) > a {
-    color: #333333;
-}
-
-/*
     Hero
 */
 

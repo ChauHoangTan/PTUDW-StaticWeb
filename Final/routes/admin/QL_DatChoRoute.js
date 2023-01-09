@@ -10,5 +10,8 @@ route.get('/Remove/:id', (req, res) => {
     controller.Remove(req,res);
 });
 
+route.post('/UpdateC', (req, res) => {
+    controller.Update(req,res);
+});
 
 module.exports = route;

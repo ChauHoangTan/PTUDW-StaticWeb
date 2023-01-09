@@ -172,3 +172,7 @@ body {
 .social-media-list > li:nth-child(4) > a {
     color: #333333;
 }
+
+.formSubmit{
+    width: 7rem;
+}

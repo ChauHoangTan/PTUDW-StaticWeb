@@ -104,13 +104,13 @@ controller.showDetails= async (req, res) => {
     //console.log(getImage)
     let findDiemDi = await models.Dia_Diem.findOne({
         where:{
-            id: detailsChuyenXe.Diem_Di
+            id: detailsChuyenXe.DiemDiId
         }
     })
     
     let findDiemDen = await models.Dia_Diem.findOne({
         where:{
-            id: detailsChuyenXe.Diem_Den
+            id: detailsChuyenXe.DiemDenId
         }
     })
 
@@ -124,6 +124,8 @@ controller.showDetails= async (req, res) => {
 
         return String(day) +"/" + String(month) +"/" + String(year)
     }
+
+    console.log(detailsChuyenXe.Ngay_Di)
 
     function convertToDateEnd(){
         let date = new Date(detailsChuyenXe.Ngay_Di)

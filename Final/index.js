@@ -11,9 +11,12 @@ app.engine('hbs', ehbs.engine({
     layoutsDir: __dirname + '/views/layouts',
     partialsDir: __dirname +  '/view/partials',
     helpers: {
+        toFixed: helper.toFixed,
         generateStarList: helper.generateStarList,
         createPagination: paginateHelper.createPagination,
-        generateSeat : helper.generateSeat
+        generateSeat : helper.generateSeat,
+        parseToDate: helper.parseToDate,
+        calculateTimeEnd: helper.calculateTimeEnd,
     },
     runtimeOptions: {
         allowProtoPropertiesByDefault: true
@@ -44,6 +47,7 @@ app.use('/timkiem', require('./routes/timkiemRoute'));
 app.use('/chuyenxe/:id/datve', require('./routes/datveRoute'));
 app.use('/taikhoan', require('./routes/taikhoanRoute'));
 app.use('/taikhoan/lichsudatve', require('./routes/lichsudatveRoute'));
+app.use('/login',require('./routes/loginRoute'))
 
 // admin routes
 app.use('/Dashboard', require('./routes/admin/DashboardRoute'));

@@ -62,8 +62,7 @@
         <div class="row">
             <div class="col-2" id="menu">
                 <div class="list-group list-group-flush">
-                    <a href="/Dashboard" class="list-group-item list-group-item-action dashboard"
-                        aria-current="true">
+                    <a href="/" class="list-group-item list-group-item-action dashboard" aria-current="true">
                         <i class="fas fa-tachometer-alt"></i>
                         Dashboard
                     </a>
@@ -85,6 +84,8 @@
 
             <!-- content -->
             <div class="col-10" id="content">
+                {{!-- thay đổi đặt chỗ --}}
+
                 <div class="container-fluid" id="content-container">
                     <div class="row">
                         <div class="col-12" id="content">
@@ -92,6 +93,9 @@
                         </div>
                     </div>
                 </div>
+
+
+
                 <!-- danh sách đặt chỗ -->
                 <div class="container-fluid" id="content-container">
                     <div class="row">
@@ -103,25 +107,70 @@
                                             <th>ID</th>
                                             <th>ID khách hàng</th>
                                             <th>Ngày tạo</th>
-                                            <th>Ngày cập nhật</th>
+                                            <th>Ngày đi</th>
+                                            <th>Giờ bắt đầu</th>
+                                            <th>Thời gian</th>
+                                            <th>Giờ đến</th>
                                             <th>Tổng tiền</th>
                                             <th>Thao tác</th>
                                         </tr>
                                     </thead>
+
                                     <tbody>
                                         {{#each dat_chos}}
                                         <tr>
                                             <td>{{id}}</td>
-                                            <td>{{KhachHangId}}</td>
-                                            <td>{{createdAt}}</td>
-                                            <td>{{updatedAt}}</td>
-                                            <td>{{Tong_Tien}}</td>
+                                            <td>{{Dat_Cho.KhachHangId}}</td>
+                                            <td>{{parseToDate createdAt}}</td>
+                                            <td>{{parseToDate Chuyen_Xe.Ngay_Di}}</td>
+                                            <td>{{Chuyen_Xe.Gio_Bat_Dau}}</td>
+                                            <td>{{Chuyen_Xe.Tong_Thoi_Gian_Hanh_Trinh}}</td>
+                                            <td>{{calculateTimeEnd Chuyen_Xe.Gio_Bat_Dau
+                                                Chuyen_Xe.Tong_Thoi_Gian_Hanh_Trinh}}</td>
+                                            <td>{{Gia}}</td>
                                             <td>
                                                 <a href="/QL_DatCho/Remove/{{id}}" class="btn btn-danger">Xóa</a>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#myModal">
+                                                    Thay đổi
+                                                </button>
+
+                                                {{!-- modals --}}
+                                                <div class="modal fade" id="myModal" tabindex="-1"
+                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Thay đổi
+                                                                    thông tin đặt chỗ</h5>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body" id="modal-body">
+                                                                <form method="POST" action="/QL_DatCho/UpdateC">
+                                                                    <div class="form-group">
+                                                                        <label for="id">ID</label>
+                                                                        <input type="text" class="form-control" id="id"
+                                                                            name="id" value="{{id}}">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="id">Giá</label>
+                                                                        <input type="text" class="form-control" id="id"
+                                                                            name="gia" value="{{Gia}}">
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary"
+                                                                            data-bs-dismiss="modal">Đóng</button>
+                                                                        <button type="submit" class="btn btn-primary">Sửa</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                         {{/each}}
-
                                     </tbody>
                                 </table>
                             </div>
